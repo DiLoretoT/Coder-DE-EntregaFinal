@@ -1,0 +1,21 @@
+[2024-03-30T00:02:00.869+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=dag_smtp_email_automatico/run_id=scheduled__2024-03-30T00:01:00+00:00/task_id=SendingEmail permission to 509
+[2024-03-30T00:02:00.877+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=dag_smtp_email_automatico/run_id=scheduled__2024-03-30T00:01:00+00:00/task_id=SendingEmail permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=dag_smtp_email_automatico/run_id=scheduled__2024-03-30T00:01:00+00:00/task_id=SendingEmail'
+[2024-03-30T00:02:01.019+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=dag_smtp_email_automatico/run_id=scheduled__2024-03-30T00:01:00+00:00/task_id=SendingEmail permission to 509
+[2024-03-30T00:02:01.024+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=dag_smtp_email_automatico/run_id=scheduled__2024-03-30T00:01:00+00:00/task_id=SendingEmail permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=dag_smtp_email_automatico/run_id=scheduled__2024-03-30T00:01:00+00:00/task_id=SendingEmail'
+[2024-03-30T00:02:01.181+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_smtp_email_automatico.SendingEmail scheduled__2024-03-30T00:01:00+00:00 [queued]>
+[2024-03-30T00:02:01.212+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_smtp_email_automatico.SendingEmail scheduled__2024-03-30T00:01:00+00:00 [queued]>
+[2024-03-30T00:02:01.213+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-03-30T00:02:01.249+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): SendingEmail> on 2024-03-30 00:01:00+00:00
+[2024-03-30T00:02:01.255+0000] {standard_task_runner.py:57} INFO - Started process 445 to run task
+[2024-03-30T00:02:01.261+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dag_smtp_email_automatico', 'SendingEmail', 'scheduled__2024-03-30T00:01:00+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/dag_email.py', '--cfg-path', '/tmp/tmpi10kim9_']
+[2024-03-30T00:02:01.268+0000] {standard_task_runner.py:85} INFO - Job 26: Subtask SendingEmail
+[2024-03-30T00:02:01.503+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=dag_smtp_email_automatico/run_id=scheduled__2024-03-30T00:01:00+00:00/task_id=SendingEmail permission to 509
+[2024-03-30T00:02:01.504+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=dag_smtp_email_automatico/run_id=scheduled__2024-03-30T00:01:00+00:00/task_id=SendingEmail permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=dag_smtp_email_automatico/run_id=scheduled__2024-03-30T00:01:00+00:00/task_id=SendingEmail'
+[2024-03-30T00:02:01.510+0000] {task_command.py:416} INFO - Running <TaskInstance: dag_smtp_email_automatico.SendingEmail scheduled__2024-03-30T00:01:00+00:00 [running]> on host a74e6333f8c5
+[2024-03-30T00:02:01.686+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_smtp_email_automatico' AIRFLOW_CTX_TASK_ID='SendingEmail' AIRFLOW_CTX_EXECUTION_DATE='2024-03-30T00:01:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-03-30T00:01:00+00:00'
+[2024-03-30T00:02:02.262+0000] {logging_mixin.py:154} INFO - Mi clave es: ***
+[2024-03-30T00:02:04.090+0000] {logging_mixin.py:154} INFO - Exito
+[2024-03-30T00:02:04.091+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-03-30T00:02:04.108+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_smtp_email_automatico, task_id=SendingEmail, execution_date=20240330T000100, start_date=20240330T000201, end_date=20240330T000204
+[2024-03-30T00:02:04.167+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-03-30T00:02:04.194+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

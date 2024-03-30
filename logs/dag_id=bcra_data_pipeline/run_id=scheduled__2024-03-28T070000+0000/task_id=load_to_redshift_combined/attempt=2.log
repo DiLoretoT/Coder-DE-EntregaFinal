@@ -1,0 +1,31 @@
+[2024-03-29T22:53:42.647+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=bcra_data_pipeline/run_id=scheduled__2024-03-28T07:00:00+00:00/task_id=load_to_redshift_combined permission to 509
+[2024-03-29T22:53:42.654+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=bcra_data_pipeline/run_id=scheduled__2024-03-28T07:00:00+00:00/task_id=load_to_redshift_combined permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=bcra_data_pipeline/run_id=scheduled__2024-03-28T07:00:00+00:00/task_id=load_to_redshift_combined'
+[2024-03-29T22:53:42.721+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=bcra_data_pipeline/run_id=scheduled__2024-03-28T07:00:00+00:00/task_id=load_to_redshift_combined permission to 509
+[2024-03-29T22:53:42.725+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=bcra_data_pipeline/run_id=scheduled__2024-03-28T07:00:00+00:00/task_id=load_to_redshift_combined permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=bcra_data_pipeline/run_id=scheduled__2024-03-28T07:00:00+00:00/task_id=load_to_redshift_combined'
+[2024-03-29T22:53:42.793+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: bcra_data_pipeline.load_to_redshift_combined scheduled__2024-03-28T07:00:00+00:00 [queued]>
+[2024-03-29T22:53:42.811+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: bcra_data_pipeline.load_to_redshift_combined scheduled__2024-03-28T07:00:00+00:00 [queued]>
+[2024-03-29T22:53:42.812+0000] {taskinstance.py:1361} INFO - Starting attempt 2 of 4
+[2024-03-29T22:53:42.833+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): load_to_redshift_combined> on 2024-03-28 07:00:00+00:00
+[2024-03-29T22:53:42.838+0000] {standard_task_runner.py:57} INFO - Started process 380 to run task
+[2024-03-29T22:53:42.841+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'bcra_data_pipeline', 'load_to_redshift_combined', 'scheduled__2024-03-28T07:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/dag_bcra.py', '--cfg-path', '/tmp/tmpckunu3yv']
+[2024-03-29T22:53:42.846+0000] {standard_task_runner.py:85} INFO - Job 11: Subtask load_to_redshift_combined
+[2024-03-29T22:53:42.927+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=bcra_data_pipeline/run_id=scheduled__2024-03-28T07:00:00+00:00/task_id=load_to_redshift_combined permission to 509
+[2024-03-29T22:53:42.928+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=bcra_data_pipeline/run_id=scheduled__2024-03-28T07:00:00+00:00/task_id=load_to_redshift_combined permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=bcra_data_pipeline/run_id=scheduled__2024-03-28T07:00:00+00:00/task_id=load_to_redshift_combined'
+[2024-03-29T22:53:42.933+0000] {task_command.py:416} INFO - Running <TaskInstance: bcra_data_pipeline.load_to_redshift_combined scheduled__2024-03-28T07:00:00+00:00 [running]> on host 5d7162670411
+[2024-03-29T22:53:43.051+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='bcra_data_pipeline' AIRFLOW_CTX_TASK_ID='load_to_redshift_combined' AIRFLOW_CTX_EXECUTION_DATE='2024-03-28T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-03-28T07:00:00+00:00'
+[2024-03-29T22:53:43.115+0000] {logging_mixin.py:154} INFO - Creating Redshift connection...
+[2024-03-29T22:53:43.131+0000] {utils.py:48} INFO - Conectándose a la base de datos...
+[2024-03-29T22:53:43.133+0000] {utils.py:55} INFO - Conexión a la base de datos establecida exitosamente
+[2024-03-29T22:53:43.134+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_bcra.py", line 156, in load_to_redshift_combined
+    with engine.connection() as conn:
+AttributeError: 'Engine' object has no attribute 'connection'
+[2024-03-29T22:53:43.156+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=bcra_data_pipeline, task_id=load_to_redshift_combined, execution_date=20240328T070000, start_date=20240329T225342, end_date=20240329T225343
+[2024-03-29T22:53:43.175+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 11 for task load_to_redshift_combined ('Engine' object has no attribute 'connection'; 380)
+[2024-03-29T22:53:43.215+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-03-29T22:53:43.237+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
